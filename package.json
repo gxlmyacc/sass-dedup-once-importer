@@ -1,0 +1,30 @@
+{
+  "name": "sass-dedup-once-importer",
+  "version": "1.0.0",
+  "description": " a sass-loader importer that ensures that multiple import statements in sass/scss files get only imported once. ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gxlmyacc/sass-dedup-once-importer.git"
+  },
+  "keywords": [
+    "sass-loader",
+    "webpack",
+    "vue"
+  ],
+  "author": "gxlmyacc",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gxlmyacc/sass-dedup-once-importer/issues"
+  },
+  "homepage": "https://github.com/gxlmyacc/sass-dedup-once-importer#readme",
+  "engines": {
+    "node": ">= 6.9.0 || >= 8.9.0"
+  },
+  "dependencies": {
+    "sass-loader": "^7.1.0"
+  }
+}
