@@ -1,6 +1,6 @@
 {
   "name": "sass-dedup-once-importer",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": " a sass-loader importer that ensures that multiple import statements in sass/scss files get only imported once. ",
   "main": "index.js",
   "scripts": {

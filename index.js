@@ -24,8 +24,6 @@ module.exports = function (options) {
     return { regx: new RegExp('^~' + key + ''), path: alias[key] };
   });
   const exclude = options.exclude;
-  // storage of already imported files
-  const imports = {};
   return function (file, prev, done) {
     function resolveFile (result) {
       let filename = result;
@@ -33,6 +31,10 @@ module.exports = function (options) {
         if (!result.file) return done(result);
         filename = result.file;
       }
+      if (!this.options.imports) this.options.imports = {};
+      const imports = this.options.imports;
+
+      filename = path.relative(process.cwd(), filename);
       if ((!exclude || !exclude.test(filename)) && imports[filename]) {
         done({ contents: '' });
         return;
@@ -40,7 +42,6 @@ module.exports = function (options) {
       imports[filename] = true;
       done({ file: filename });
     }
-
     if (this.options.indentedSyntax) {
       if (!/\.sass$/.test(file)) file += '.sass';
     } else if (!/\.scss$/.test(file)) file += '.scss';
@@ -60,6 +61,6 @@ module.exports = function (options) {
       }
       if (!filename) filename = file;
     }
-    resolveFile(filename);
+    resolveFile.call(this, filename);
   };
 };
