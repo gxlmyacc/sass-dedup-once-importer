@@ -3,7 +3,7 @@
 [![NPM version](https://img.shields.io/npm/v/sass-dedup-once-importer.svg?style=flat)](https://npmjs.com/package/sass-dedup-once-importer)
 [![NPM downloads](https://img.shields.io/npm/dm/sass-dedup-once-importer.svg?style=flat)](https://npmjs.com/package/sass-dedup-once-importer)
 
-This is an importer function which can be used with node-sass. tt ensures that multiple import statements in sass/scss files get only imported once.
+This is an importer function which can be used with node-sass. it ensures that multiple import statements in sass/scss files get only imported once.
 
 ## Install
 
